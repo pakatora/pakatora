@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>パカパカTRACKMAN</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Helvetica Neue', sans-serif;
+      color: white;
+      text-align: center;
+    }
+
+    /* 背景を全画面にする */
+    .background img {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    /* メイン（ファーストビュー） */
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+      padding: 0 1rem;
+    }
+
+    .store-name {
+      font-size: 4rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 1rem 2rem;
+      border-radius: 12px;
+    }
+
+    .notice {
+      font-size: 1.5rem;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+    }
+
+    /* 下部情報セクション（シンプル） */
+    .info {
+      padding: 2rem 1rem 3rem;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: left;
+      line-height: 1.9;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+    }
+    .info h2 {
+      margin: 0 0 0.5rem;
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+    .info p { margin: 0.2rem 0 1rem; }
+
+    .price-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.5rem 0 1.2rem;
+    }
+    .price-table th, .price-table td {
+      border: 1px solid rgba(255,255,255,0.6);
+      padding: 0.6rem 0.8rem;
+    }
+    .price-table th { background: rgba(0,0,0,0.45); }
+    .price-table td { background: rgba(0,0,0,0.25); }
+
+    .catch {
+      margin-top: 1.2rem;
+      font-weight: 800;
+      text-align: center;
+      background: rgba(0,0,0,0.5);
+      padding: 0.9rem 1rem;
+      border-radius: 10px;
+    }
+
+    /* 小さめ画面調整 */
+    @media (max-width: 520px) {
+      .store-name { font-size: 2.4rem; padding: 0.7rem 1rem; }
+      .notice { font-size: 1.1rem; }
+      .info { padding-bottom: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- 背景画像（必要ならファイル名を変えてOK） -->
+  <div class="background">
+    <img src="pakapaka_logo.png.png" alt="背景画像">
+  </div>
+
+  <!-- ファーストビュー -->
+  <div class="main-content">
+    <div class="store-name">パカパカTRACKMAN</div>
+    <div class="notice">2025年9月30日までは土日のみの営業です</div>
+  </div>
+
+  <!-- 下部情報（シンプル表示） -->
+  <section class="info" aria-label="店舗情報">
+    <h2>営業日</h2>
+    <p>いまのところ <strong>土日のみの営業</strong> です。</p>
+
+    <h2>利用料金</h2>
+    <table class="price-table">
+      <thead>
+        <tr><th>区分</th><th>料金</th><th>備考</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1日券</td><td>2000円</td><td>1ドリンク付き</td></tr>
+        <tr><td>半日券</td><td>1000円</td><td>1ドリンク付き</td></tr>
+      </tbody>
+    </table>
+
+    <h2>ドリンク</h2>
+    <p>ソフトドリンク：300円／アルコール類：500円／ビール：600円</p>
+
+    <h2>ご案内</h2>
+    <p>迫力の100インチモニターで観戦しながら、ゆったりとしたスペースで美味しい食事を食べながら楽しみませんか？</p>
+
+    <p class="catch"><strong>馬券購入はご自身のスマホから！その熱い瞬間を店内で仲間と一緒に楽しみませんか？</strong></p>
+  </section>
+</body>
